@@ -460,7 +460,8 @@ class ModelTrainer(Trainer):
             cur = score[ground_truth[id]]
             # score_larger = (score[neg_list[id]] > (cur + 0.00001))\
             # .data.cpu().numpy()
-            score_larger = (score[neg_list[id]] > (cur)).data.cpu().numpy()
+            # score_larger = (score[neg_list[id]] > (cur)).data.cpu().numpy()
+            score_larger = (score > (cur)).data.cpu().numpy()
             true_item_rank = np.sum(score_larger) + 1
             pred.append(true_item_rank)
 

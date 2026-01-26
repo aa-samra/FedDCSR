@@ -18,7 +18,7 @@ class SeqDataset(Dataset):
     data_dir = "data"
     prep_dir = "prep_data"
     # The number of negative samples to test all methods (including ours)
-    num_test_neg = 999
+    num_test_neg = 1
 
     def __init__(self, domain, model="SAN", mode="train", max_seq_len=16,
                  load_prep=True):
