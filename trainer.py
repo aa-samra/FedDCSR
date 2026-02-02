@@ -458,6 +458,7 @@ class ModelTrainer(Trainer):
             # result[id, -1]: (num_items, )
             score = result[id, -1]
             cur = score[ground_truth[id]]
+            score[seq[id]] = -np.inf
             # score_larger = (score[neg_list[id]] > (cur + 0.00001))\
             # .data.cpu().numpy()
             # score_larger = (score[neg_list[id]] > (cur)).data.cpu().numpy()
