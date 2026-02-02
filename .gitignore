@@ -34,7 +34,7 @@ MANIFEST
 .DS_Store
 
 # data
-data/*
+# data/*
 !data/.gitkeep
 checkpoint/*
 !checkpoint/.gitkeep
