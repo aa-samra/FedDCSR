@@ -82,10 +82,10 @@ All other arguments (batch size, epochs, domains, etc.) are fixed and passed as 
 ```bash
 python tune.py \
   --method FedDCSR \
-  --domains Books Movies Games \
+  --domains book movie\
   --batch_size 128 \
-  --epochs 200 \
-  --local_epoch 1 \
+  --epochs 40 \
+  --local_epoch 3 \
   --gpu 0 \
   --n_trials 50
 ```
@@ -105,8 +105,8 @@ python tune.py \
 
 | Argument        | Default | Description            |
 | --------------- | ------- | ---------------------- |
-| `--epochs`      | 200     | Total training epochs  |
-| `--local_epoch` | 1       | Local epochs per round |
+| `--epochs`      | 40     | Total training epochs  |
+| `--local_epoch` | 3      | Local epochs per round |
 | `--batch_size`  | 128     | Training batch size    |
 | `--optimizer`   | `adam`  | Optimizer              |
 | `--gpu`         | 0       | GPU ID                 |
@@ -118,7 +118,7 @@ python tune.py \
 | -------------- | -------- | ------------------------------- |
 | `--n_trials`   | 50       | Number of Optuna trials         |
 | `--study_name` | `tuning` | Optuna study name               |
-| `--storage`    | `None`   | Optional Optuna storage backend |
+| `--storage`    | `sqlite:///optuna.db`   | Optional Optuna storage backend |
 
 ---
 
