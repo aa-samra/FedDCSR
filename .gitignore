@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pkl
 
 # C extensions
 *.so
@@ -144,3 +145,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+nohup.out
+data/book/prep_data/SASRec_train_data.pkl
+optuna.db

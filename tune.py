@@ -44,6 +44,7 @@ def objective(trial, args):
         "--epochs", str(args.epochs),
         "--local_epoch", str(args.local_epoch),
         "--batch_size", str(args.batch_size),
+        "--max_seq_len", str(args.max_seq_len),
         "--optimizer", args.optimizer,
         "--lr", str(lr),
         "--weight_decay", str(weight_decay),
@@ -78,6 +79,8 @@ def main():
     parser.add_argument("--domains", nargs="+", required=True)
     parser.add_argument("--log_dir", default="./log")
     parser.add_argument("--gpu", default=0, type=int)
+    parser.add_argument("--max_seq_len", default=50, type=int)
+    
 
     # fixed training args
     parser.add_argument("--epochs", type=int, default=40)
